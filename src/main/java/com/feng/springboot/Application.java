@@ -10,6 +10,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * 在独立的容器(非内嵌)中@ServletComponentScan不起作用, 取为代之的是容器内建的discovery机制
+ * 启用Security @EnableWebSecurity
+ * 启用方法级别的安全 @EnableGlobalMethodSecurity(prePostEnabled = true)
+ */
 @EnableConfigurationProperties({ProjectProperties.class})
 @SpringBootApplication
 public class Application {
