@@ -1,0 +1,31 @@
+spring:
+  devtools:
+    restart:
+      # 是否使用重启功能
+      enabled: true
+      # 添加排除项, 浏览器不会实时刷新
+      exclude: static/**,public/**
+      # 保持默认, 添加额外的排除项
+      # additional-exclude:
+      # 非类路径下的修改需要重启
+      # additionalpaths:
+      # 当此文件改变时才会触发重启(可在频繁修改时启用)
+      # trigger-file:
+
+    livereload:
+
+      # 浏览器实时刷新
+      enabled: false
+  profiles:
+    active: LapTop, Mouse
+    # dev始终生效
+    include: dev
+project:
+  spring:
+    list:
+      - mmm
+      - nnn
+    map:
+      "aaa": aaa
+      "bbb": bbb
+    validateStr: validateStr
