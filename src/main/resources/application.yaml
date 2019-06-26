@@ -20,6 +20,13 @@ spring:
     active: LapTop, Mouse
     # dev始终生效
     include: dev
+  datasource:
+     url: jdbc:mysql://127.0.0.1:3306/springboot?characterEncoding=utf-8&useUnicode=true
+     username: root
+     password: root
+     driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: false
 project:
   spring:
     list:

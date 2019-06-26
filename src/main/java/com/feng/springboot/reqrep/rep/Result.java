@@ -8,6 +8,12 @@ public class Result<T> {
     private String desc;
     private T data;
 
+    public Result(StatusCode statusCode) {
+        this.code = statusCode.getCode();
+        this.message = statusCode.getMessage();
+        this.desc = statusCode.getDesc();
+    }
+
     public Result(StatusCode statusCode, T data) {
         this.code = statusCode.getCode();
         this.message = statusCode.getMessage();
