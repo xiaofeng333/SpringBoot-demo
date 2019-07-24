@@ -1,6 +1,7 @@
 package com.feng.springboot.constant;
 
 public enum StatusCode {
+    FAIL(-1, "fail", "失败"),
     SUCESS(0, "sucess", "成功"),
     PARAM_ERROR(400, "param error", "参数错误");
 
