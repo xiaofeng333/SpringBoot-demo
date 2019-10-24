@@ -1,5 +1,6 @@
 package com.feng.springboot;
 
+import com.feng.springboot.annotation.componet.CustomImportBeanDefinitionRegistrar;
 import com.feng.springboot.doc.Swagger2;
 import com.feng.springboot.properties.ProjectProperties;
 import org.slf4j.Logger;
@@ -9,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 
 /**
  * 在独立的容器(非内嵌)中@ServletComponentScan不起作用, 取为代之的是容器内建的discovery机制
@@ -17,6 +19,7 @@ import org.springframework.context.annotation.Bean;
  */
 @EnableConfigurationProperties({ProjectProperties.class})
 @SpringBootApplication
+@Import(CustomImportBeanDefinitionRegistrar.class)
 public class Application {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
