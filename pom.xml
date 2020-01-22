@@ -161,10 +161,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
                 <configuration>
 
                     <!-- 将devtools打包进jar包, 不建议使用 -->
-                    <excludeDevtools>false</excludeDevtools>
+                    <!-- <excludeDevtools>false</excludeDevtools> -->
+                    <!-- <layout>NONE</layout> -->
+                    <!-- <classifier>exec</classifier>-->
+                    <attach>false</attach>
                 </configuration>
             </plugin>
             <plugin>
